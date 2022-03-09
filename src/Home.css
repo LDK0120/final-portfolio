@@ -2,9 +2,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: lightgray;
+  background-color: rgb(224, 222, 222);
   color: black;
   height: 500px;
+}
+
+.carousel-item .item-image {
+  width: 50%;
+  height: 100%;
+}
+
+.carousel-item .item-content {
+  width: 50%;
+  height: 100%;
 }
 
 .carousel {
@@ -15,7 +25,7 @@
 
 .move-carousel-location {
   white-space: nowrap;
-  transition: transform 2.5s;
+  transition: transform 2s;
 }
 
 .buttons {
@@ -27,9 +37,10 @@
 .btn {
   padding: 5px 10px;
   border: none;
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin: 5px;
 }
 
 button {
@@ -45,6 +56,26 @@ button:active {
   transform: scale(0.9);
 }
 
-image {
-  max-width: 100%;
+.item-image-one {
+  background-image: url("../public/pacman.png");
+}
+
+.item-image-two {
+  background-image: url("../public/huluclone.png");
+}
+
+.item-image-three {
+  background-image: url("../public/dictionary.png");
+}
+
+.item-image-four {
+  background-image: url("../public/weather.png");
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

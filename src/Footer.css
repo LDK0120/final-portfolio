@@ -1,9 +1,17 @@
+.Footer {
+  height: 25vh;
+}
+
 .contact-links {
   display: flex;
+  flex-direction: column;
+}
+
+.link-items {
+  display: flex;
   padding: 2em;
-  height: 200px;
-  align-items: center;
   justify-content: center;
+  padding-bottom: 1em;
 }
 
 .contact-links a {
@@ -13,4 +21,23 @@
 .contact-links span {
   margin-left: 1em;
   letter-spacing: 0.1em;
+}
+
+.Footer .open-source a:hover,
+.Footer .open-source a:active {
+  cursor: pointer;
+  color: rgb(22, 144, 243);
+}
+
+.Footer .open-source a:visited {
+  color: rgb(22, 144, 243);
+}
+
+.git-hub-link {
+  text-align: center;
+  font-size: 0.4rem;
+}
+
+.open-source a {
+  margin: 0;
 }
