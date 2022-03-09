@@ -3,15 +3,20 @@ import "./Home.css";
 
 export default function Home() {
     const [position, setPosition] = useState(0)
+    let newPosition = 0;
 
-    function handleClick(newPosition) {
-        // if(newPosition < 0) {
-        //     newPosition = 0;
-        // } else if (newPosition > 3) {
-        //     newPosition = 3;
-        // }
+    function handleClick(event) {
+        let id = parseInt(event.target.id)
+        newPosition = newPosition + id
 
-        //setPosition(newPosition)
+        if (newPosition < 0) {
+            newPosition = 0;
+        } else if (newPosition > 3) {
+            newPosition = 3;
+        } 
+
+        alert(newPosition)
+        setPosition(newPosition)
     }
 
     return (
@@ -26,8 +31,8 @@ export default function Home() {
         </div>
 
         <div className="buttons">
-            <button className="prev btn" onClick={handleClick(position - 1)}>prev</button>
-            <button className="next btn" onClick={handleClick(position + 1)}>next</button>
+            <button className="prev btn" id={-1} onClick={handleClick}>prev</button>
+            <button className="next btn" id={1} onClick={handleClick}>next</button>
         </div>
 
             </div>
