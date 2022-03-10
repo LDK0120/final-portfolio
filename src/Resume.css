@@ -1,0 +1,25 @@
+.resume {
+  width: 65%;
+  margin: 50px auto;
+}
+
+.pdf-download-link {
+  display: block;
+  text-decoration: none;
+  background-color: rgb(78, 142, 238);
+  margin: 15px auto;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  transition: all 250ms ease-in-out;
+  transform: translateX(-6px);
+}
+
+.download-icon {
+  margin-left: 5px;
+}
+
+img {
+  width: 100%;
+}

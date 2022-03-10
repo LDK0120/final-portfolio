@@ -1,0 +1,15 @@
+.About p {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  height: 500px;
+  font-size: 1.2rem;
+  font-family: "Fredoka", sans-serif;
+}
+
+.create-space {
+  margin: 0 0 20px;
+}

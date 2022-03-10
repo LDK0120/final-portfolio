@@ -11,10 +11,6 @@ body {
   background-image: url("../public/rockywall.png");
 }
 
-.main {
-  border: 1px solid magenta;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -38,4 +34,10 @@ body {
 
 .App a {
   margin-left: 0.9em;
+}
+
+@media (max-width: 600px) {
+  .App ul {
+    letter-spacing: normal;
+  }
 }

@@ -19,8 +19,8 @@ function App() {
           <li><h1>Laura Kim</h1></li>
           <li><p className="title">FRONT END DEVELOPER</p></li>
           <li><p>Connect with me at  
-                <a href="#"><FontAwesomeIcon icon={faLinkedinIn} className="fa-lg" /></a>
-                <a href="mailto:Laurakim120@gmail.com?subject=Reaching out from your portfolio"><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></a>
+                <a href="#" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="fa-lg" /></a>
+                <a href="mailto:Laurakim120@gmail.com?subject=Reaching out from your portfolio" rel="noreferrer"><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></a>
                 <p><FontAwesomeIcon icon={faPhone} className="search-icon" /> 847) 791 7503</p>            
             </p></li>
         </ul>

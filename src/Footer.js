@@ -10,12 +10,12 @@ export default function Footer() {
         <div className="Footer">
             <div className="contact-links">
                 <div className="link-items">
-                <a href="#"><FontAwesomeIcon icon={faLinkedinIn} className="fa-lg" /></a>
-                <a href="mailto:Laurakim120@gmail.com?subject=Reaching out from your portfolio"><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></a>
+                <a href="#" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} className="fa-lg" /></a>
+                <a href="mailto:Laurakim120@gmail.com?subject=Reaching out from your portfolio" rel="noreferrer"><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></a>
                 <span><FontAwesomeIcon icon={faPhone} className="search-icon" /> 847) 791 7503</span>
                 </div>
                 <div className="git-hub-link">
-                <p className="open-source"><a href="https://github.com/LDK0120/final-portfolio" target="_blank">open-source</a> coded by Laura Kim</p>
+                <p className="open-source"><a href="https://github.com/LDK0120/final-portfolio" rel="noreferrer" target="_blank">open-source</a> coded by Laura Kim</p>
                 </div>
             </div>
         </div>
