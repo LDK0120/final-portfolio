@@ -7,20 +7,28 @@ import { faGithub, faReact, faHtml5, faCss3, faJs, faBootstrap } from "@fortawes
 
 export default function Home() {
     const [position, setPosition] = useState(0)
-    let newPosition = 0;
+
+    function handlePrev() {
+        if (position !== 0) {
+            setPosition(position - 1)
+        } else {
+            setPosition(position)
+        }
+        
+    }
+
+    function handleNext() {
+        if (position !== 3) {
+            setPosition(position + 1)
+        } else {
+            setPosition(position)
+        }
+    }
 
     function handleClick(event) {
         let id = parseInt(event.target.id)
-        newPosition = newPosition + id
 
-        if (newPosition < 0) {
-            newPosition = 0;
-        } else if (newPosition > 3) {
-            newPosition = 3;
-        } 
-
-        alert(newPosition)
-        setPosition(newPosition)
+        setPosition(id)
     }
 
     return (
@@ -36,7 +44,7 @@ export default function Home() {
             <div className="carousel-title">My Projects</div>
             <div className="carousel">
 
-        <div className="move-carousel-location" style={{ transform: `translateX(-${0 * 100}%)` }}>
+        <div className="move-carousel-location" style={{ transform: `translateX(-${position * 100}%)` }}>
             <div className="carousel-item" style={ { width: "100%" }}>
                 <div className="item-image item-image-one"></div>
                 <div className="item-content item-content-one">
@@ -65,7 +73,7 @@ export default function Home() {
             <div className="carousel-item" style={ { width: "100%" }}>
                 <div className="item-image item-image-two"></div>
                 <div className="item-content item-content-two">
-                    <h1>Hulu Press Website Clone</h1>
+                    <h1>Hulu Press Clone</h1>
                     <div>
                     <a href="https://suspicious-mcnulty-ade48e.netlify.app/" className="content-buttons" target="_blank" rel="noreferrer">Live Preview</a>
                     <a href="https://github.com/LDK0120/react-clone" className="content-buttons" target="_blank" rel="noreferrer">View Code <FontAwesomeIcon icon={faGithub} className="fa-lg"/></a>
@@ -139,10 +147,15 @@ export default function Home() {
         </div>
 
         <div className="buttons">
-            <button className="prev btn" id={-1} onClick={handleClick}><FontAwesomeIcon icon={faAngleLeft} /></button>
-            <button className="next btn" id={1} onClick={handleClick}><FontAwesomeIcon icon={faAngleRight} /></button>
+            {position === 0? <button className="prev btn disabled" onClick={handlePrev}><FontAwesomeIcon icon={faAngleLeft} className="arrow" /></button>: <button className="prev btn" onClick={handlePrev}><FontAwesomeIcon icon={faAngleLeft} /></button>}
+            {position === 3? <button className="next btn disabled" onClick={handleNext}><FontAwesomeIcon icon={faAngleRight} className="arrow" /></button>: <button className="next btn" onClick={handleNext}><FontAwesomeIcon icon={faAngleRight} /></button>}
         </div>
-
+        <div className="dots">
+            {position === 0? <div className="colored-dot" id="0" onClick={handleClick}></div> : <div className="empty-dot" id="0" onClick={handleClick}></div>}
+            {position === 1? <div className="colored-dot" id="1" onClick={handleClick}></div> : <div className="empty-dot" id="1" onClick={handleClick}></div>}
+            {position === 2? <div className="colored-dot" id="2" onClick={handleClick}></div> : <div className="empty-dot" id="2" onClick={handleClick}></div>}
+            {position === 3? <div className="colored-dot" id="3" onClick={handleClick}></div> : <div className="empty-dot" id="3" onClick={handleClick}></div>}
+        </div>
             </div>
         </div>
     )

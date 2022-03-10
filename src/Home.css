@@ -58,6 +58,7 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: lightgray;
 }
 
 button:active {
@@ -92,7 +93,8 @@ button:active {
   width: 100%;
   height: 100%;
   padding: 2em;
-  line-height: 2em;
+  line-height: 1.5em;
+  overflow: scroll;
 }
 
 .item-content h1 {
@@ -145,15 +147,58 @@ item-content a:hover {
   height: 45px;
 }
 
+.disabled:hover {
+  cursor: not-allowed;
+  background-color: rgb(189, 207, 245);
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin: 0 auto;
+  transform: translateY(-50px);
+}
+
+.colored-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgb(78, 142, 238);
+  margin: 3px;
+  transition: all 250ms ease-in-out;
+}
+
+.empty-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: lightgray;
+  margin: 3px;
+  transition: all 250ms ease-in-out;
+}
+
+.colored-dot:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.empty-dot:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
 @media (max-width: 600px) {
   .item-content h1,
   .item-content h2 {
     text-align: center;
+    font-size: 1rem;
   }
 
   .item-content {
     line-height: 1.2rem;
     text-align: center;
+    overflow: scroll;
   }
 
   .item-content a {
